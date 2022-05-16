@@ -1,0 +1,11 @@
+tasks:
+  - command: |
+      pyenv virtualenv honeypot && pyenv activate honeypot
+      pip install -U pip && pip install -r requirements.dev.in
+      git clone https://github.com/nickmoreton/wagtail-honeypot.git
+      cd wagtail-honeypot && git checkout wagtail-3.0 && cd ..
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+# ports:
+#   - port: 3000
+#     onOpen: open-preview
