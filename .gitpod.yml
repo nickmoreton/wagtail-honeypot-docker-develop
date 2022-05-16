@@ -4,7 +4,8 @@ tasks:
       pip install -U pip && pip install -r requirements.dev.in
       git clone https://github.com/nickmoreton/wagtail-honeypot.git
       cd wagtail-honeypot && git checkout wagtail-3.0 && cd ..
-      echo "CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io']">> app/settings/base.py
+      cp app/settings/local.example.py app/settings/local.py
+      echo "CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io']">> app/settings/local.py
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 # ports:
